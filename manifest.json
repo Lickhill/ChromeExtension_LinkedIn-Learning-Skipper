@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Learning Quiz Skipper",
+  "version": "1.0",
+  "description": "Automatically skips chapter quizzes on LinkedIn Learning",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.linkedin.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/learning/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
